@@ -1,0 +1,15 @@
+name: demo-ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  green:
+    name: Always Green
+    runs-on: ubuntu-latest
+    steps:
+      - name: Instant pass
+        run: echo "✅ demo-ci passed"
